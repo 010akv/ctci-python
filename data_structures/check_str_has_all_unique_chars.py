@@ -32,6 +32,13 @@ class CheckStrCharsUnique:
             seen.append(char)
         return True
 
+    def check_no_extra_ds(self, inp_str):
+        if not self.case_sens:
+            inp_str = inp_str.lower()
+        for i,char in enumerate(inp_str):
+            if char in inp_str[:i]+inp_str[i+1:]:
+                
+                
 
 def main():
     arg_parser = Args()
